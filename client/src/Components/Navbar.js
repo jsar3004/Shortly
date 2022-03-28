@@ -24,7 +24,7 @@ export default function NavBar() {
             variant="h2"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, alignSelf: 'center',textAlign:'center' }}
+            sx={{ flexGrow: 1 ,alignSelf: 'center',textAlign:'center' }}
           >
             Shortly
           </Typography>
