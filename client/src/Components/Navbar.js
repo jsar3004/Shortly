@@ -18,7 +18,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed">
+      <AppBar position="static">
         <StyledToolbar>
           <Typography
             variant="h2"

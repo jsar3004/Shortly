@@ -7,13 +7,14 @@ import { Button } from '@mui/material';
 import { Paper } from '@mui/material';
 import { InputBase } from '@mui/material';
 import { Divider } from '@mui/material';
-
+import Ui from './Homeui';
+import NestedGrid from './Grid';
 export default function SimpleContainer() {
   return (
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="md">
-        <Box sx={{ bgcolor: '#fff',boxShadow:'0 1px 4px #ccc' ,height: 'auto',margin:"180px auto 20px auto"  }}>
+        <Box sx={{ bgcolor: '#fff',boxShadow:'0 1px 4px #ccc' ,height: 'auto',margin:"30px auto 20px auto"  }}>
           <Typography
           component="div"
           sx={{flexGrow: 1,textAlign:'center',fontSize:'36px',fontWeight:'bold',fontFamily:'asap,arial',color:'#505050',margin:"10px auto 30px auto",paddingTop:"20px"}}
@@ -46,7 +47,10 @@ export default function SimpleContainer() {
          Use our URL Shortener to create a shortened link making it easy to remember
           </Typography> 
       </Box>
+      <Ui/>
+      <NestedGrid/>
       </Container>
+    
     </React.Fragment>
   );
 }
