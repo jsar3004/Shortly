@@ -9,6 +9,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   alignItems: 'flex-start',
   paddingTop: theme.spacing(1),
   paddingBottom: theme.spacing(2),
+  backgroundColor:'black',
   // Override media queries injected by theme.mixins.toolbar
   '@media all': {
     minHeight: 128,
@@ -17,14 +18,14 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 export default function NavBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1  }}>
       <AppBar position="static">
         <StyledToolbar>
           <Typography
             variant="h2"
             noWrap
             component="div"
-            sx={{ flexGrow: 1 ,alignSelf: 'center',textAlign:'center' }}
+            sx={{ flexGrow: 1 ,alignSelf: 'center',textAlign:'center'}}
           >
             Shortly
           </Typography>

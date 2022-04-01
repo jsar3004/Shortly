@@ -1,0 +1,12 @@
+ul {
+    font: 16px "source sans pro",arial;
+    color: #484848;
+    line-height: 1.5;
+    list-style: none;
+    margin: 0;
+}
+.errorlist{
+    background: url(https://www.shorturl.at/img/icon-tick.png) no-repeat left;
+    padding: 0 0 0 35px;  
+    margin-bottom: 1em;
+}

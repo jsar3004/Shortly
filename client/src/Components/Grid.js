@@ -4,6 +4,9 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import DevicesOtherIcon from '@mui/icons-material/DevicesOther';
+import QueryStatsIcon from '@mui/icons-material/QueryStats';
+import PanToolIcon from '@mui/icons-material/PanTool';
 import RecommendIcon from '@mui/icons-material/Recommend';
 import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
 import AssuredWorkloadIcon from '@mui/icons-material/AssuredWorkload';
@@ -85,7 +88,7 @@ function FormRow2() {
     <React.Fragment>
       <Grid item xs={4}>
         <Item>
-        <RecommendIcon className="svg_icons" />
+        <QueryStatsIcon className="svg_icons" />
         <Typography
           component="div"
           sx={{flexGrow: 1,fontSize:'25px',fontWeight:'bold',fontFamily:'asap,arial',color:'#505050',margin:"10px auto 30px auto"}}
@@ -102,7 +105,7 @@ function FormRow2() {
       </Grid>
       <Grid item xs={4}>
         <Item>
-        <AllInclusiveIcon className="svg_icons"/>
+        <PanToolIcon className="svg_icons" sx={{fontSize:'medium'}}/>
         <Typography
           component="div"
           sx={{flexGrow: 1,fontSize:'25px',fontWeight:'bold',fontFamily:'asap,arial',color:'#505050',margin:"10px auto 30px auto"}}
@@ -118,7 +121,7 @@ function FormRow2() {
         </Item>
       </Grid>
       <Grid item xs={4}>
-        <Item><AssuredWorkloadIcon className="svg_icons"/>
+        <Item><DevicesOtherIcon className="svg_icons"/>
         <Typography
           component="div"
           sx={{flexGrow: 1,fontSize:'25px',fontWeight:'bold',fontFamily:'asap,arial',color:'#505050',margin:"10px auto 30px auto"}}

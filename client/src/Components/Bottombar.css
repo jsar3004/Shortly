@@ -1,0 +1,25 @@
+.List{
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+ 
+  }
+.link {
+    display: block;
+    color: blue;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size:larger;
+   
+  }
+.links {
+    float: left;
+    padding-left: 2em;
+   
+  }
+  .table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
