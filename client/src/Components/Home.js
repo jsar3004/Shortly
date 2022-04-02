@@ -23,10 +23,10 @@ export default function SimpleContainer() {
           </Typography>  
         <Paper
       component="form"
-      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', maxWidth:"100%" }}
+      sx={{ p: '2px 4px', display: 'flex', alignItems: 'center' }}
     >
       <InputBase
-        sx={{borderWidth:'2px',borderStyle:'thin', ml: 1, flex: 1 }}
+        sx={{borderWidth:'2px',borderStyle:'thin', ml: 1, flex: 1,width:'80%' }}
         placeholder="Paste Link Here"
         inputProps={{ 'aria-label': 'Paste Link Here' }}
         id="outlined-required"
