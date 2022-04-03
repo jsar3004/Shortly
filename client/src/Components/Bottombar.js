@@ -6,6 +6,8 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
+import { Button } from '@mui/material';
+import { Navigate, useNavigate } from 'react-router-dom';
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     alignItems: 'flex-start',
     paddingTop: theme.spacing(1),
@@ -17,6 +19,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     },
   }));
 export default function Bottombar(){
+  const navigate = useNavigate();
     return(
         <>
            <Box sx={{ flexGrow: 1 }}>
@@ -33,11 +36,11 @@ export default function Bottombar(){
            </Typography>
            <div className='table'>
            <ul className='List'>
-  <li className='links'><a className='Link' href="#home">Shortly</a></li>
-  <li className='links'><a className='Link' href="#news">Url Click Counter</a></li>
-  <li className='links'><a className='Link' href="#news"> Terms of Service</a></li>
-  <li className='links'><a className='Link' href="#contact">Contact</a></li>
-  <li className='links'><a className='Link' href="#about">Privacy</a></li>
+  <li className='links'><Button onClick={()=>navigate("/")}>Shortly</Button></li>
+  <li className='links'><Button onClick={()=>navigate("/totalclicks")}>Url Click Counter</Button></li>
+  <li className='links'><Button onClick={()=>navigate("/")}>Terms of Service</Button></li>
+  <li className='links'><Button onClick={()=>navigate("/")}>Contact</Button></li>
+  <li className='links'><Button onClick={()=>navigate("/")}>Privacy</Button></li>
           </ul>
           </div>
            </Container>
