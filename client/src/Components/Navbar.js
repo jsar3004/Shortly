@@ -3,11 +3,8 @@ import { styled } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import {NavLink} from 'react-router-dom';
-import { Link } from "react-router-dom";
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   alignItems: 'flex-start',
   paddingTop: theme.spacing(1),
@@ -18,7 +15,6 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
     minHeight: 128,
   },
 }));
-
 export default function NavBar() {
   const navigate = useNavigate();
   const Nav=(e)=>{

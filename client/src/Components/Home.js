@@ -8,8 +8,42 @@ import { Paper } from '@mui/material';
 import { InputBase } from '@mui/material';
 import { Divider } from '@mui/material';
 import Ui from './Homeui';
+import { useState } from 'react';
 import NestedGrid from './Grid';
-export default function SimpleContainer() {
+import { useNavigate } from 'react-router-dom';
+
+export default function SimpleContainer({shorturl,setshorturl,longurl,setlongurl}) {
+  const navigate = useNavigate();
+  const[url,seturl]=useState("");
+  const Seturl=(e)=>{
+      seturl(e.target.value);
+  }
+  const createurl = async(e) => {
+    
+    e.preventDefault();
+     //console.log("Pressed");
+    const res=await fetch("/createurl",{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+         url
+        })
+    });
+    if(res.status===204)
+   {
+    navigate("/error")
+   }
+   if(res.status===201||res.status===200)
+   {
+    const data=await res.json();
+    setshorturl(data[0].short);
+    setlongurl(data[0].full);
+    navigate("/shortener")
+    //  console.log(shorturl);
+   }
+  }
   return (
     <React.Fragment>
       <CssBaseline />
@@ -30,9 +64,11 @@ export default function SimpleContainer() {
         placeholder="Paste Link Here"
         inputProps={{ 'aria-label': 'Paste Link Here' }}
         id="outlined-required"
+        value={url}
+        onChange={(e)=>Seturl(e)}
       />
       <Divider sx={{ height: 28, m: 1 }} orientation="vertical" />
-      <Button variant="contained">Shorten Url</Button>
+      <Button variant="contained" onClick={createurl}>Shorten Url</Button>
     </Paper>
     <Typography
           component="div"

@@ -7,7 +7,8 @@ import { Button } from '@mui/material';
 import { Paper } from '@mui/material';
 import { InputBase } from '@mui/material';
 import { Divider } from '@mui/material';
-export default function Shortened() {
+import Link from '@mui/material/Link';
+export default function Shortened({shorturl,setshorturl,longurl,setlongurl}) {
   return (
     <React.Fragment>
       <CssBaseline />
@@ -34,27 +35,34 @@ export default function Shortened() {
         placeholder="Paste Link Here"
         inputProps={{ 'aria-label': 'Paste Link Here' }}
         id="outlined-required"
+        value={"http://localhost:8000/"+shorturl}
       />
       <Divider sx={{ height: 28, m: 1 }} orientation="vertical" />
-      <Button variant="contained">Copy Url</Button>
+      <Button variant="contained" onClick={() => {navigator.clipboard.writeText("http://localhost:8000/"+shorturl)}}>Copy Url</Button>
     </Paper>
     <Typography
           component="div"
           sx={{flexGrow: 1,textAlign:'center',fontSize:'16px',fontFamily:'"source sans pro",arial',color:'#505050',margin:"20px auto 30px auto",paddingTop:"20px"}}
           >
-      Long URL:  
+      Long URL: <Link href={"http://localhost:8000/"+shorturl} underline="none">
+  {"http://localhost:8000/"+shorturl}
+</Link>
           </Typography>  
           <Typography
           component="div"
           sx={{flexGrow: 1,textAlign:'center',fontSize:'16px',fontFamily:'"source sans pro",arial',color:'#505050',margin:"20px auto 30px auto"}}
           >
+             <Link href="/count" underline="none">
          Track the total of clicks in real-time from your shortened URL.
+         </Link>
           </Typography> 
           <Typography
           component="div"
           sx={{flexGrow: 1,textAlign:'center',fontSize:'16px',fontFamily:'"source sans pro",arial',color:'#505050',margin:"20px auto 70px auto"}}
           >
+             <Link href="/" underline="none">
          Create other shortened URL.
+         </Link>
           </Typography> 
       </Box>
    

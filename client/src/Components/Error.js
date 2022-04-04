@@ -4,10 +4,6 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { Button } from '@mui/material';
-import { Paper } from '@mui/material';
-import { InputBase } from '@mui/material';
-import { Divider } from '@mui/material';
-
 import "./error.css";
 export default function Error() {
   return (
